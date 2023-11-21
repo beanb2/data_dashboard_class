@@ -19,12 +19,12 @@ header-incudes:
 Section 003, Spring Semester 2024 \\
 \end{center}
 
-## Instructor 
+## Instructors
 \begin{tabular}{ll}
-\textbf{Name} & Brennan Bean, PhD and Kevin Moon, PhD \\
-\textbf{Email} & brennan.bean@usu.edu \\
-\textbf{Office} & Animal Science 202 \\
-& (hours TBD)
+\textbf{Name} & Brennan Bean (PhD), Kevin Moon (PhD), Ben Shaw, and Scout Jarman \\
+\textbf{Email} & brennan.bean@usu.edu; kevin.moon@usu.edu; \\
+& ben.shaw@usu.edu; scout.jarman@usu.edu \\
+\textbf{Office} & ANSC 202 (Bean) and ANSC 214 (Moon) \\
 \end{tabular}
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
@@ -36,11 +36,11 @@ knitr::opts_chunk$set(echo = TRUE)
 ## Course Materials 
 \textbf{Textbook}: \textit{Mastering Shiny} by Hadley Wickham (\url{https://mastering-shiny.org/index.html})
 
-Additional supplementary materials will be provided in Canvas as necessary. Note that the online version of the textbook, which is the version you are encouraged to use, is free. 
+Additional supplementary materials will be provided in Canvas or GitHub as necessary. Note that the online version of the textbook, which is the version you are encouraged to use, is free. 
 
 ## Introduction
 
-This course will pair undergraduate students with two PhD students (Ben Shaw and Scout Jarman) to work on a real data problem related to water resource management in the Bear Lake. The PhD students will train machine learning and/or deep learning (ML/DL) on measurements of daily temperature and precipitation in the Bear Lake Watershed to predict annual min/max Bear Lake water elevation levels. These models will then be coupled with downscaled estimates of future climate projections to estimate Bear Lake water elevation levels through the end of the century. This course will focus on developing interactive data dashboards that embed these models and allow users to interactively explore changes in projected lake elevation levels to changes in modeling assumptions or future climate scenarios. These dashboards will be given to the Utah Department of Natural Resources to help them make informed decisions for the future of Bear Lake.
+This course will pair undergraduate students with two PhD students (Ben Shaw and Scout Jarman) to work on a real data problem related to water resource management in the Bear Lake. This course will focus on developing interactive data dashboards that embed machine learning models, created by the PhD students, that predict future lake elevation levels based on future climate projections of precipitation and temperature. These dashboards will allow users to interactively explore the sensitivity of projected lake elevation levels to changes in modeling assumptions or future climate scenario selection. These dashboards will be given to the Utah Department of Natural Resources to help them make informed decisions for the future of Bear Lake.
 
 After finishing this class, students should be able to:
  
@@ -54,7 +54,7 @@ After finishing this class, students should be able to:
 This course will require extensive programming in the R statistical software language. All students will be required to have a working laptop capable of installing R that they can bring to each class period. It is expected that all students will be using a current version of R (R 4.3.x or later) and will be using updated versions (as of 09/01/2023) of all software packages. 
 
 ## Grades
-Final scores in this course will be determined by the number of points earned divided by 1000. Thus, each 10 points on an assignment, regardless of category, represents 1% of your final score. The following grade scale is guaranteed, but I reserve the right to adjust this grade scale in favor of the students if necessary. \textbf{Note that this grade scale contains no + or - designations.} This means that a 91\% is an A, not an A- and an 89\% is a B, not a B+, in this course. A breakdown of points is given in the following sub-sections.
+Final scores in this course will be determined by the number of points earned divided by 1000. Thus, each 10 points on an assignment, regardless of category, represents 1% of your final score. The following grade scale is guaranteed, but the instructors reserve the right to adjust this grade scale in favor of the students if necessary. \textbf{Note that this grade scale contains no + or - designations.} This means that a 91\% is an A, not an A- and an 89\% is a B, not a B+, in this course. A breakdown of points is given in the following sub-sections.
 
 \begin{table}[h]
 \centering
@@ -73,32 +73,33 @@ Percent	& Grade \\
 
 ### Attendance (350 points)
 
-The final project in this class will be completed in groups. This makes your regular attendance critical to the collective success of the course. As such, you are required to attend all course sessions. To accommodate inevitable extenuating circumstances, all students are given three "excused" absences for the semester. Any absences beyond the three excused absences will result in a 60 point deduction to your attendance score (maximum deduction of 350 points).
+The data dashboards will be completed in groups. This makes your regular attendance critical to the collective success of the course. As such, you are required to attend all course sessions. To accommodate inevitable extenuating circumstances, all students are given three "excused" absences for the semester. Any absences beyond the three excused absences will result in a 60 point deduction to your attendance score (maximum deduction of 350 points).
 
-The three excused absences are intended to cover family emergencies, illness, and university excused absences. This means that, should a student have to miss for a university excused absence, they only have TWO remaining excused absences for the semester, and not three. Please talk to the instructor during the first week if you anticipate having more than two university-excused absences during the semester.
+The three excused absences are intended to cover family emergencies, illness, and university excused absences. This means that, should a student have to miss for a university excused absence, they only have TWO remaining excused absences for the semester, not three. Please talk to the instructor during the first week if you anticipate having more than two university-excused absences during the semester. 
 
 ### Final Project (300 points)
 
-This class culminates in an interactive data dashboard suitable for presentation at USU's Spring Runoff Conference in March. Students will work in groups of three on these dashboards as overseen by a PhD student mentor. Students will be required to make regular contributions to the project and will be required to respond to multiple rounds of feedback from both the PhD student and the instructor. 
+This class culminates in an interactive data dashboard suitable for presentation at USU's Spring Runoff Conference in March. Students will work in groups of three on these dashboards as overseen by a PhD student mentor. Each student will be required to make regular contributions to the project, hosted on GitHub, and will be required to continually improve their dashboards based on multiple rounds of feedback from both the PhD student and the instructors. 
 
 ### Spring Runoff Conference Presentation (100 points)
 
-Near the end of March (tentative dates of March 25-26), students will be required to present USU's Spring Runoff Conference and present their data dashboards at this conference. 
+Near the end of March (tentative dates of March 25-26), students will be required to attend and present their data dashboards at USU's Spring Runoff Conference. 
 
 ### Research Journal (150 points)
 
-Each student will be required to keep track of their progress in a research journal. This journal should include 1-2 paragraphs of reflection for every day you work on the project (minimum of 3 entries per week). Things to write about include (1) what you worked on that day, (2) what you learned, (3) what you tried that didn't work, and (4) next steps for your work. These research journals will start once the group projects begin and you will be required to submit draft copies of the journal multiple times during the semester. 
+Each student will be required to keep track of their progress in a research journal. This journal should include 1-2 paragraphs of reflection for every day you work on the project (minimum of 3 entries per week). Things to write about mat include (1) what you worked on that day, (2) what you learned, (3) what you tried that didn't work, and (4) next steps or action items. These research journals will start once the group projects begin and you will be required to submit draft copies of the journal multiple times during the semester. 
 
 ### In-class assignments (100 points)
 
-During the first 3-4 weeks of the semester there will be a series of in-class assignments designed to prepare you to start making a publishable data dashboard. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
+During the first 3-4 weeks of the semester there will be a series of none in-class assignments designed to teach you how to make data dashboards. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
 
 ### Experience Cache Valley (10 points extra credit)
 Students have the option to participate in an activity unrelated to the coursework in or immediately surrounding Cache Valley and write about their experience. \textbf{Note that the report must be submitted within two weeks of the completed activity.} See Canvas for assignment details.
 
-
 ## Instructor Commitments
-As a research faculty member, I am expected to devote about 50% of my efforts on research, 45% to teaching, and 5% to service activities. This means that I must carefully partition my time so that I provide quality instruction and timely feedback without sacrificing the other aspects of my faculty responsibilities or personal life. For this reason, you can expect to receive a response to me on any email or Canvas discussion within one business day, but may not respond to your requests over the weekend.
+This course will be primarily administered by the two PhD Student mentors. Faculty involvement will be substantial in the first few weeks, but will transition to more of a supervisory role as you begin to work on your projects with your mentors. As such, most of your course communications will likely best suited for your PhD mentor, whose contact information is provided at the top of this syllabus. That in mind, you are always welcome to communicate with the course instructors as needed. 
+
+When communicating with mentors or instructions, please remember that all of us have research projects we are working on outside of this project. This means that we must carefully partition our time so that we can provide quality instruction and timely feedback without sacrificing our other research responsibilities or personal life. For this reason, you can expect to receive a response to emails or Canvas discussion threads within one business day, but we may not respond to your requests over the weekend.
 
 ## Student Expectations 
 
@@ -109,12 +110,14 @@ This course is unique in the opportunity it provides you to work on a project in
 Students are responsible for all information presented in class and are responsible to regularly check Canvas for announcements, due dates, and other communications from the instructor. \textbf{When you need to email the instructor something related to this class, please use the Canvas email feature to do so.}  
 
 ### Academic Honesty
-In this course, cheating is defined as \textbf{any attempt made by a student to deceive the instructor} in the representation of their work. This definition includes all forms of plagiarism, including copying code from other sources or people without attribution. It is natural and encouraged to take programming ideas and small code snippets from online sources or chatGPT. However, when this occurs, \textbf{be sure to acknowledge the source of your idea/code snippet in your program comments.} Any observed instances of cheating will be reported to the University and warrants automatic failure from the course.
+In this course, cheating is defined as \textbf{any attempt made by a student to deceive the instructor} in the representation of their work. This definition includes all forms of plagiarism, including copying code from other sources or people without attribution. It is natural and encouraged to take programming ideas and code snippets from online sources or chatGPT. However, when this occurs, \textbf{be sure to acknowledge the source of your information in your program comments.} Any observed instances of cheating will be reported to the University and potentially warrants failure from the course.
 
 ## IDEA Objectives 
 The university using the IDEA learning objectives to measure the effectiveness of courses. Of the 13 pre- defined learning objectives, the ones most relevant to this course include:
 \begin{itemize}
 \item	(3) Learning to apply course material (to improve thinking, problem solving, and decisions)
+\item (5) Acquiring skills in working with others as a member of a team
+\item (9) Learning how to find, evaluate, and use resources to explore a topic in depth
 \item (13) Learning appropriate methods for collecting, analyzing, and interpreting numerical information
 \end{itemize}
 
