@@ -1,5 +1,5 @@
 ---
-title: 'Stat 5810: Data Wrangling'
+title: 'Stat 5810: Data Dashboard Development'
 output: pdf_document
 fontsize: 12pt
 header-incudes:
@@ -16,51 +16,45 @@ header-incudes:
 
 \vspace{-1cm}
 \begin{center}
-Section 002, Fall Semester 2023 \\
+Section 003, Spring Semester 2024 \\
 \end{center}
 
 ## Instructor 
 \begin{tabular}{ll}
-\textbf{Name} & Brennan Bean \\
-\textbf{Email} & (please use Canvas to email me) \\
+\textbf{Name} & Brennan Bean, PhD and Kevin Moon, PhD \\
+\textbf{Email} & brennan.bean@usu.edu \\
 \textbf{Office} & Animal Science 202 \\
-& Tuesdays and Thursdays from 10:30am - 12:00pm
+& (hours TBD)
 \end{tabular}
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Prerequisites
-\textit{STAT 5050, or instructor permission.}
+\textit{Instructor permission}
 
 ## Course Materials 
-\textbf{Textbook}: \textit{Introduction to Data Science: Data Wrangling and Visualization with R} by Rafael A. Irizarry (\url{https://rafalab.dfci.harvard.edu/dsbook-part-1/})
+\textbf{Textbook}: \textit{Mastering Shiny} by Hadley Wickham (\url{https://mastering-shiny.org/index.html})
 
-This textbook will contain the majority of course information. Additional supplementary materials will be provided in Canvas as necessary. 
+Additional supplementary materials will be provided in Canvas as necessary. Note that the online version of the textbook, which is the version you are encouraged to use, is free. 
 
 ## Introduction
 
-\textbf{``...the time may not be very remote when it will be understood that for complete initiation as an efficient citizen ... it is as necessary to be able to compute, to think in averages and maxima and minima, as it is now to be able to read and write.''} - H.G. Wells in ``Mankind in the Making''
-
-The sophistication and accessibility of data analysis software continues to improve. At the same time, the size and complexity of the datasets that the modern world needs analyzed continue to increase. This requires people who understand how to produce efficient and reproducible data workflows that can handle large quantities of information.      
-
-This course introduces students to data wrangling, which is the process by which information is cleaned, organized, summarized, and visualized. Data wrangling will be taught in this course using the R statistical software environment, relying heavily on a set of ancillary software packages collectively called the `tidyverse`. While the course happens to use R, the principles of data wrangling taught in this course are not specific to any single software platform. In fact, many of the functions in the tidyverse are designed to function and feel like SQL.
+This course will pair undergraduate students with two PhD students (Ben Shaw and Scout Jarman) to work on a real data problem related to water resource management in the Bear Lake. The PhD students will train machine learning and/or deep learning (ML/DL) on measurements of daily temperature and precipitation in the Bear Lake Watershed to predict annual min/max Bear Lake water elevation levels. These models will then be coupled with downscaled estimates of future climate projections to estimate Bear Lake water elevation levels through the end of the century. This course will focus on developing interactive data dashboards that embed these models and allow users to interactively explore changes in projected lake elevation levels to changes in modeling assumptions or future climate scenarios. These dashboards will be given to the Utah Department of Natural Resources to help them make informed decisions for the future of Bear Lake.
 
 After finishing this class, students should be able to:
  
 \begin{enumerate}
-\item Use computer programming to manipulate and visualize large quantities of data. 
-\item Understand how to join information from multiple data tables. 
-\item Understand the computational limitations of data wrangling as well as the best practices for writing computationally efficient data manipulations.
+\item Develop reactive data dashboards that embed dynamic visuals and predictive models. 
+\item Understand how to work independently on a real data project both individually and in groups. 
+\item Understand how to use version control to coordinate software development with other people on large and complex programming tasks. 
 \end{enumerate}
 
-Some universities offer a data wrangling course that is three credits instead of one. With only a single credit, emphasis will be placed on introducing you to important tools and ideas knowing that a full understanding of the concepts will come through practice and application in future courses, research, and work settings. 
-
 ## Software
-This course will require extensive programming in the R statistical software language. All students will be required to have a working laptop capable of installing R that they can bring to each class period. It is expected that all students will be using a current version of R (R 4.2.x or later) and will be using updated versions (as of 1/1/2023) of all software packages. 
+This course will require extensive programming in the R statistical software language. All students will be required to have a working laptop capable of installing R that they can bring to each class period. It is expected that all students will be using a current version of R (R 4.3.x or later) and will be using updated versions (as of 09/01/2023) of all software packages. 
 
 ## Grades
-Final scores in this course will be determined by the number of points earned divided by 1000. Thus, each 10 points on an assignment, regardless of category, represents 1% of your final score. The following grade scale is guaranteed, but I reserve the right to adjust this grade scale in favor of the students if necessary. \textbf{Note that this grade scale contains no + or - designations.} This means that a 91\% is an A, not an A- and an 89\% is a B, not a B+, in this course.
+Final scores in this course will be determined by the number of points earned divided by 1000. Thus, each 10 points on an assignment, regardless of category, represents 1% of your final score. The following grade scale is guaranteed, but I reserve the right to adjust this grade scale in favor of the students if necessary. \textbf{Note that this grade scale contains no + or - designations.} This means that a 91\% is an A, not an A- and an 89\% is a B, not a B+, in this course. A breakdown of points is given in the following sub-sections.
 
 \begin{table}[h]
 \centering
@@ -77,60 +71,55 @@ Percent	& Grade \\
 \end{tabular}
 \end{table}
 
-## Assignments 
-\textbf{All assignments are due by 11:59pm MDT on the listed due date in Canvas. Excluding the policy outlined for the homework assignments, late assignments will not be accepted.} Assignments will be programming intensive and will require you to analyze, visualize, and interpret tabular data. Points will be given for well-organized, documented, and formatted code. 
+### Attendance (350 points)
 
-### Engagement (In Class) (390 points)
-Attending class is critical for course success and you are expected to attend. Most classes will include small assignments that are expected to be completed during class. You will be required to turn in many of these assignments which will be awarded a small number of points based on completion. If you have to miss class, you will be expected to complete and submit the in-class assignments on your own outside of class. Two of your fifteen in-class assignment scores (all worth 30 points each) will be dropped at the end of the semester. 
+The final project in this class will be completed in groups. This makes your regular attendance critical to the collective success of the course. As such, you are required to attend all course sessions. To accommodate inevitable extenuating circumstances, all students are given three "excused" absences for the semester. Any absences beyond the three excused absences will result in a 60 point deduction to your attendance score (maximum deduction of 350 points).
 
-### Homework (610 points)
-There will be five homework assignments, a syllabus quiz, and a getting to know you survey. The homework assignments will require you to submit Rmarkdown files and/or entire R projects (compressed to a zip folder) where you show your code, visualizations, and findings all in a single document. While students should work together on homework assignments, each student should write their own answers and code. \textbf{Directly copied code or answers will be considered cheating.} Note also that there are \textbf{no dropped scores for homework assignments.}
+The three excused absences are intended to cover family emergencies, illness, and university excused absences. This means that, should a student have to miss for a university excused absence, they only have TWO remaining excused absences for the semester, and not three. Please talk to the instructor during the first week if you anticipate having more than two university-excused absences during the semester.
+
+### Final Project (300 points)
+
+This class culminates in an interactive data dashboard suitable for presentation at USU's Spring Runoff Conference in March. Students will work in groups of three on these dashboards as overseen by a PhD student mentor. Students will be required to make regular contributions to the project and will be required to respond to multiple rounds of feedback from both the PhD student and the instructor. 
+
+### Spring Runoff Conference Presentation (100 points)
+
+Near the end of March (tentative dates of March 25-26), students will be required to present USU's Spring Runoff Conference and present their data dashboards at this conference. 
+
+### Research Journal (150 points)
+
+Each student will be required to keep track of their progress in a research journal. This journal should include 1-2 paragraphs of reflection for every day you work on the project (minimum of 3 entries per week). Things to write about include (1) what you worked on that day, (2) what you learned, (3) what you tried that didn't work, and (4) next steps for your work. These research journals will start once the group projects begin and you will be required to submit draft copies of the journal multiple times during the semester. 
+
+### In-class assignments (100 points)
+
+During the first 3-4 weeks of the semester there will be a series of in-class assignments designed to prepare you to start making a publishable data dashboard. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
 
 ### Experience Cache Valley (10 points extra credit)
 Students have the option to participate in an activity unrelated to the coursework in or immediately surrounding Cache Valley and write about their experience. \textbf{Note that the report must be submitted within two weeks of the completed activity.} See Canvas for assignment details.
 
-### The ``Life Happens'' Card
-You all inevitably face extenuating circumstances during your academic career. To accommodate this, each student is provided with a “life happens” card, which can be used once and only once during the semester. \textbf{The life happens card will extend the due date by one week on one (and only one) homework assignment.} The life happens card cannot be used to extend the due date on any other assignment type, including group assignments. Note that homework assignments will not be accepted after the extended due date for partial credit. This card is intended to accommodate serious extenuating circumstances, including medical emergencies. Additional accommodations will not be made should the life happens card be used early in the semester for non-serious reasons, only to miss another assignment for more serious reasons later in the semester. \textbf{You must fill out the Life Happens Card Canvas Quiz before the original due date if you intend to use your life happens card.}
 
 ## Instructor Commitments
 As a research faculty member, I am expected to devote about 50% of my efforts on research, 45% to teaching, and 5% to service activities. This means that I must carefully partition my time so that I provide quality instruction and timely feedback without sacrificing the other aspects of my faculty responsibilities or personal life. For this reason, you can expect to receive a response to me on any email or Canvas discussion within one business day, but may not respond to your requests over the weekend.
 
 ## Student Expectations 
 
-### Attendance 
-This course has no official attendance requirement. However, students are still expected to attend each class period, respectfully engage in the classroom discussion, and engage their peers on the in-class assignments. Respect is demonstrated by being on time, staying engaged, and not talking over the instructor or other students during class discussions. 
+### Working Independently
+This course is unique in the opportunity it provides you to work on a project independently over an extended period of time. It is designed to mimic the type of experiences you may have engaging in applied research during graduate school. Unlike a regular class, the instructor or the PhD mentors will not be able to outline every step to solve a problem. You will need to learn how to read materials on your own 
 
 ### Course Communication
 Students are responsible for all information presented in class and are responsible to regularly check Canvas for announcements, due dates, and other communications from the instructor. \textbf{When you need to email the instructor something related to this class, please use the Canvas email feature to do so.}  
 
-### Asking Questions 
-Students are strongly encouraged to ask questions during class and office hours. Students are also encouraged to ask questions related to course assignments using the “Discussions” tab on the course Canvas page. Posting assignment-related questions on the discussion board provides opportunities for other members of the class to answer questions. \textbf{Keep in mind, however, that you should NOT post entire blocks of code when answering or asking questions.} The discussion boards work best when all of us actively engage in both asking questions and providing answers. Note that personal/sensitive questions should not be posted to the discussion board but rather sent as a Canvas email message. Conversely, homework related questions should not be sent as an email.
-
-### Turning in Assignments 
-Because all assignments in this course are submitted electronically, no accommodations will be made for students requesting to submit late assignments, even for university excused absences. This excludes the previously described Life Happens Card exception.
-
 ### Academic Honesty
-In this course, cheating is defined as \textbf{any attempt made by a student to deceive the instructor} in the representation of their work. This definition includes all forms of plagiarism, including copying code from other students in the course. It is natural and encouraged to take programming ideas and small code snippets from online sources or chatGPT. However, when this occurs, \textbf{be sure to acknowledge the source of your idea/code snippet in your program comments.} Any observed instances of cheating will be reported to the University and warrants automatic failure from the course.
-
-### Recommendations for Course Success
-It is critical to remember that understanding the concepts discussed in this course will come through repetition. Rarely, if ever, is a complex concept understood after hearing it once in lecture. Rather, understanding will come by:
-\begin{enumerate}
-\item Running the provided programming examples on your own machine.
-\item Engaging in class discussions by asking and answering questions.
-\item Reviewing material between class sessions.
-\item Starting homework assignments soon after they are assigned.
-\end{enumerate}
+In this course, cheating is defined as \textbf{any attempt made by a student to deceive the instructor} in the representation of their work. This definition includes all forms of plagiarism, including copying code from other sources or people without attribution. It is natural and encouraged to take programming ideas and small code snippets from online sources or chatGPT. However, when this occurs, \textbf{be sure to acknowledge the source of your idea/code snippet in your program comments.} Any observed instances of cheating will be reported to the University and warrants automatic failure from the course.
 
 ## IDEA Objectives 
 The university using the IDEA learning objectives to measure the effectiveness of courses. Of the 13 pre- defined learning objectives, the ones most relevant to this course include:
 \begin{itemize}
-\item (1) Gaining a basic understanding of the subject (e.g., factual knowledge, methods, principles, generalizations, theories)
 \item	(3) Learning to apply course material (to improve thinking, problem solving, and decisions)
 \item (13) Learning appropriate methods for collecting, analyzing, and interpreting numerical information
 \end{itemize}
 
 ## Disclaimer
-This is a new course that may require mid-semester adjustments. As such, the instructor reserves the right to make minor changes to this syllabus as needed throughout the semester. No change in the syllabus will be made without first advertising the proposed change to the students. Students will be given 2-3 days to review any changes and provide comments/objections to the instructor before any change is executed. 
+This is a new course running in a unique format and may require mid-semester adjustments. As such, the instructor reserves the right to make minor changes to this syllabus as needed throughout the semester. No change in the syllabus will be made without first advertising the proposed change to the students. Students will be given 2-3 days to review any changes and provide comments/objections to the instructor before any change is executed. 
 
 ## University Resources 
 
