@@ -91,7 +91,7 @@ Each student will be required to keep track of their progress in a research jour
 
 ### In-class assignments (100 points)
 
-During the first 3-4 weeks of the semester there will be a series of none in-class assignments designed to teach you how to make data dashboards. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
+During the first 3-4 weeks of the semester there will be a series of in-class assignments designed to teach you how to make data dashboards. These assignments are based on completion and can be submitted during or after class. Your lowest score in this assignment category will be dropped. 
 
 ### Experience Cache Valley (10 points extra credit)
 Students have the option to participate in an activity unrelated to the coursework in or immediately surrounding Cache Valley and write about their experience. \textbf{Note that the report must be submitted within two weeks of the completed activity.} See Canvas for assignment details.
