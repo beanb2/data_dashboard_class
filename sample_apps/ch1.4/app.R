@@ -12,7 +12,7 @@ server <- function(input, output, session) {
   product <- reactive({input$x * input$y})
   
   output$product <- renderText({ 
-    product()
+    product(+7)
   })
   output$product_plus5 <- renderText({ 
     product() + 5
