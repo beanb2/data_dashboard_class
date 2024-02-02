@@ -6,7 +6,6 @@
 #
 #    http://shiny.rstudio.com/
 #
-
 library(shiny)
 
 ui <- fluidPage(
@@ -15,15 +14,20 @@ ui <- fluidPage(
   textOutput("out")
 )
 
-# Define server logic required to draw a histogram
 server <- function(input, output) {
-
-  observeEvent(input$capture, {
-    output$out <- renderText(input$x)
-  })
-
   
+  # Define a reactive value to store the captured value of x
+  captured_x <- reactiveVal(NULL)
+  
+  # Update the captured value of x when the capture button is clicked
+  observeEvent(input$capture, {
+    captured_x(input$x)
+  })
+  
+  # Render the captured value of x
+  output$out <- renderText({
+    captured_x()
+  })
 }
 
-# Run the application 
 shinyApp(ui = ui, server = server)
